@@ -12,6 +12,7 @@ import Foundation
 public final class Engine {
     let arguments: [String]
     let directory = DirectoryManager()
+    var xcodeProject: PBXprojManager!
     var contents: ContentProvider!
     public init (arguments: [String]) {
         self.arguments = arguments

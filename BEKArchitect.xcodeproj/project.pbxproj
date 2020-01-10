@@ -15,6 +15,7 @@
 		133D662023C7BD9F00C7C358 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D661F23C7BD9F00C7C358 /* Errors.swift */; };
 		133D662223C7BE4200C7C358 /* CommonFileTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D662123C7BE4200C7C358 /* CommonFileTypes.swift */; };
 		133D662623C7C9DB00C7C358 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D662523C7C9DB00C7C358 /* Logger.swift */; };
+		1363D7D223C8AC3E00003F3E /* PBXprojManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1363D7D123C8AC3E00003F3E /* PBXprojManager.swift */; };
 		13CD678723C6FFF700CC49EA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD678623C6FFF700CC49EA /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		133D661F23C7BD9F00C7C358 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		133D662123C7BE4200C7C358 /* CommonFileTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFileTypes.swift; sourceTree = "<group>"; };
 		133D662523C7C9DB00C7C358 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		1363D7D123C8AC3E00003F3E /* PBXprojManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBXprojManager.swift; sourceTree = "<group>"; };
 		13CD678323C6FFF700CC49EA /* BEKArchitect */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BEKArchitect; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CD678623C6FFF700CC49EA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		13CD678F23C709B500CC49EA /* BEKArchitect */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BEKArchitect; sourceTree = "<group>"; };
@@ -82,12 +84,13 @@
 			path = Commands;
 			sourceTree = "<group>";
 		};
-		133D661123C7907E00C7C358 /* DirectoryManager */ = {
+		133D661123C7907E00C7C358 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				133D661D23C7BC6600C7C358 /* DirectoryManager.swift */,
+				1363D7D123C8AC3E00003F3E /* PBXprojManager.swift */,
 			);
-			path = DirectoryManager;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		133D661823C7926700C7C358 /* Resources */ = {
@@ -120,7 +123,7 @@
 			children = (
 				133D660B23C75BA100C7C358 /* Core */,
 				133D661823C7926700C7C358 /* Resources */,
-				133D661123C7907E00C7C358 /* DirectoryManager */,
+				133D661123C7907E00C7C358 /* Managers */,
 				133D661023C7907200C7C358 /* Commands */,
 				133D660D23C75C9900C7C358 /* Utils */,
 				13CD678623C6FFF700CC49EA /* main.swift */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13CD678723C6FFF700CC49EA /* main.swift in Sources */,
+				1363D7D223C8AC3E00003F3E /* PBXprojManager.swift in Sources */,
 				133D661C23C795AE00C7C358 /* DateUtils.swift in Sources */,
 				133D661A23C7929A00C7C358 /* ContentProvider.swift in Sources */,
 				133D661E23C7BC6600C7C358 /* DirectoryManager.swift in Sources */,
