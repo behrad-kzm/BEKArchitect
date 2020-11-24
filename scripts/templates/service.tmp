@@ -1,0 +1,16 @@
+from repository.<#feature_name#>Repository import <#feature_name#>Repository
+from domain.models import <#feature_name#>DomainModel
+from serviceLayer.AuthorizationManager import AuthorizationManager
+
+
+
+class <#feature_name#>Service:
+    repository: <#feature_name#>Repository
+    auth: AuthorizationManager
+
+    def __init__(self, repository: <#feature_name#>Repository, auth: AuthorizationManager):
+        self.repository = repository
+        self.auth = auth
+
+    def get_data(self, object_id: str):
+        return self.repository.find_record_by_id(object_id)

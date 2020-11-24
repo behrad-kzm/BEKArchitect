@@ -1,0 +1,18 @@
+import zope.interface
+from domain.interfaces import Dictable
+from domain.models import <#feature_name#>DomainModel
+
+
+@zope.interface.implementer(Dictable)
+class <#feature_name#>DTO:
+
+    _model: <#feature_name#>DomainModel
+
+    def __init__(self, model: <#feature_name#>DomainModel):
+        self._model = model
+
+    def to_dict(self) -> dict:
+        json = {
+           # "example": self._model.attr
+        }
+        return json

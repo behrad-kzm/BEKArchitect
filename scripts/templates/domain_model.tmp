@@ -1,0 +1,27 @@
+from datetime import datetime
+
+
+class <#feature_name#>DomainModel:
+    object_id: str = None
+    creation_date: datetime = None
+    _json = {}
+
+    def __init__(self):
+        self.object_id = None
+        self.creation_date = None
+        self._json = {}
+
+    def set_id(self, value: str):
+        if value is not None:
+            self.object_id = value
+            self._json['_id'] = value
+        return self
+
+    def set_creation_date(self, value: datetime):
+        if value is not None:
+            self.creation_date = value
+            self._json['creation_date'] = value
+        return self
+
+    def to_dict(self):
+        return self._json

@@ -1,0 +1,26 @@
+from flask_classy import FlaskView, route
+from flask import request
+from flask_api import status
+from web.dtos import BaseResponse, BaseError, <#feature_name#>DTO
+from web.utils.Localization import MessageIds
+from serviceLayer.core.ServiceProvider import ServiceProvider
+from flask import jsonify
+
+
+class <#feature_name#>View(FlaskView):
+
+    @route('/user/<#feature_name#>', methods=['GET'])
+    def update_profile(self):
+        # GET
+        service = ServiceProvider().make_<#underscored_feature_name#>_service()
+        object_id = 'example'
+        model = service.get_data(object_id)
+        if model is not None:
+            dto = <#feature_name#>DTO(model)
+            response = BaseResponse(dto.to_dict())
+            return jsonify(response.serialize()), status.HTTP_200_OK
+        response = BaseError(MessageIds.ERROR_NOT_FOUND)
+        return jsonify(response.serialize()), status.HTTP_404_NOT_FOUND
+
+        response = BaseError(MessageIds.ERROR_INVALID_PROPERTY)
+        return jsonify(response.serialize()), status.HTTP_400_BAD_REQUEST
