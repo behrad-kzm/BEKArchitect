@@ -1,21 +1,50 @@
 # BEKArchitect
-An XCode command line tool for generating files and directory of your project based on your selected architecture.
+Shell scripts for automatically generate python modules. It will generate python files and classes for service layer, repository layer, models, database, API
 <img src="https://github.com/behrad-kzm/BEKDesing/blob/master/Images/BEKHeader.png">
 
-BEKArchitect helps developers to created features in fastest way as possible. create new features in 'The Clean Architecture' contains many files and directories so it can take much time for organizing them inside the xcode project.
+BEKArchitect helps developers to created features in fastest way as possible. creating new features in desired architecture with files and classes are a time consuming job for developers.
 with the BEKArchitect this action will complete in single line of command (in a second).
 
 ## Demo
 [TODO]
 
 ## Example
-[TODO
-]
-## Installation
+```
+source BEKArchitect.sh MyBeautifulFeatureName path/to/project/directory/
+
 ```
 
-  brew install BEKArchitect
+## How It works?
+BEKArchitect uses files with extension `.tmp`.
+They contains base structure for the file that will going to generate
 
+
+## Volunteer accepted
+BEKArchitect only works for project structures like below:
+
+```
+Project directory
+                  |____app.py
+                  |____wsgi.py
+                  |____domain
+                             |____models
+                                        |____ExampleDomainModel.py
+                  |____serviceLayer
+                                    |____ExampleService.py
+                                    |____core
+                                             |____ServiceProvider.py
+                                             
+                  |____repository
+                                 |____ExampleRepository.py
+                                 |____core
+                                          |____RepositoryProvider.py
+                  |____web
+                          |____dtos
+                                   |____ExampleDTO.py
+                          |____views
+                                   |____ExampleView.py
+                          |____BaseRouter.py
+                  |____requirements.txt
 ```
 
 
